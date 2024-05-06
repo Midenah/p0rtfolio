@@ -1,9 +1,9 @@
 import Image from "next/image";
-import JT from "@/public/JT profile.jpg";
+import BG from "@/public/bg.jpg";
 
 export default function Home() {
   return (
-    <div className="divide-y divide-gray-100 dark:divide-gray-700">
+    <div className="divide-y divide-gray-100 dark:divide-gray-700 ">
       <div className="space-y-2 pt-5 pb-8 md:space-x-5">
         <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-13">
           Mantra
@@ -14,16 +14,9 @@ export default function Home() {
         <div className="flex flex-col items-center pt-8">
           <Image
             alt="Picture of Justina Olamide"
-            src={JT}
-            className="h-48 w-48 rounded-full object-cover object-top"
+            src={BG}
+            className="h-60 w-50% object-cover"
           />
-          <h3 className="pt-4 pb-2 text-2xl font-bold leading-8 tracking-tight">
-            Justina Oluyomi
-          </h3>
-          <p className="text-gray-500 dark:text-gray-300 text-center">
-            (Midenah)
-          </p>
-
           <div className="flex space-x-5 pt-6">
             <a href="https://github.com/Midenah" target="_blank">
               <svg
@@ -46,7 +39,7 @@ export default function Home() {
                 <path d="M880 112H144c-17.7 0-32 14.3-32 32v736c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V144c0-17.7-14.3-32-32-32zM349.3 793.7H230.6V411.9h118.7v381.8zm-59.3-434a68.8 68.8 0 1168.8-68.8c-.1 38-30.9 68.8-68.8 68.8zm503.7 434H675.1V608c0-44.3-.8-101.2-61.7-101.2-61.7 0-71.2 48.2-71.2 98v188.9H423.7V411.9h113.8v52.2h1.6c15.8-30 54.5-61.7 112.3-61.7 120.2 0 142.3 79.1 142.3 181.9v209.4z" />
               </svg>
             </a>
-            <a href="" target="_blank">
+            <a href="https://mail.google.com/mail/" target="_blank">
               <svg
                 viewBox="0 0 1024 1024"
                 fill="currentColor"
@@ -55,7 +48,7 @@ export default function Home() {
                 <path d="M928 160H96c-17.7 0-32 14.3-32 32v640c0 17.7 14.3 32 32 32h832c17.7 0 32-14.3 32-32V192c0-17.7-14.3-32-32-32zm-80.8 108.9L531.7 514.4c-7.8 6.1-18.7 6.1-26.5 0L189.6 268.9A7.2 7.2 0 01194 256h648.8a7.2 7.2 0 014.4 12.9z" />
               </svg>
             </a>
-            <a href="" target="_blank">
+            <a href="https://twitter.com/kingtnah" target="_blank">
               <svg
                 viewBox="0 0 1024 1024"
                 fill="currentColor"
@@ -68,18 +61,25 @@ export default function Home() {
         </div>
 
         <div className="prose max-w-none prose-lg pt-8 pb-7 dark:prose-invert xl:col-span-2">
-          <p>
-            Hey, i am Justina Oluyomi, I am a Front-end developer based in
-            ikeja, Lagos.
+          <p className="text-center text-3xl bg-gradient-to-r from-cyan-500 to-teal-500 mb-10">
+            <em>
+              Art is a life-giving source for design harmony. Get a dose of
+              design inspiration in the set of wise and powerful ideas from
+              famous creative people of different times.
+            </em>
           </p>
-          <p>
-            I love building applications with React and to share them with teams
-            and friends in my community. Working with me brings out in me and
-            you.
+          <p className="text-center text-3xl bg-gradient-to-r from-cyan-500 to-teal-500 mb-10">
+            <em>Everything you can imagine is real</em>
           </p>
-          <p>Experience is the best teacher</p>
-          <p>No harm in trying</p>
-          <p>Practice makes perfect</p>
+          <p className="text-center text-3xl bg-gradient-to-r from-cyan-500 to-teal-500 mb-10">
+            <em>Experience is the best teacher</em>
+          </p>
+          <p className="text-center text-3xl bg-gradient-to-r from-cyan-500 to-teal-500 mb-10">
+            <em>No harm in trying</em>
+          </p>
+          <p className="text-center text-3xl bg-gradient-to-r from-cyan-500 to-teal-500 mb-10">
+            <em>Practice makes perfect</em>
+          </p>
         </div>
       </div>
     </div>
