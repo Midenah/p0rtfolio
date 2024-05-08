@@ -1,9 +1,10 @@
 "use client";
 
 import { Disclosure } from "@headlessui/react";
-import Link from "next/link";
+// import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Themebutton from "./Themebutton";
+import { Link } from "react-scroll"
 
 export default function Navbar() {
   let pathname = usePathname() || "/";
@@ -16,16 +17,21 @@ export default function Navbar() {
             <div className="flex justify-between h-16">
               <div className="flex justify-between w-full">
                 <div className="flex items-center">
-                  <Link href="/">
-                    <h1 className="text-2xl font-medium">
-                      Justina<span className="text-teal-500">Oluyomi</span>
+                  <Link 
+                  to="/">
+                    <h1 className="text-2xl  font-medium">
+                      <span className="text-teal-500">Justina</span>
                     </h1>
                   </Link>
                 </div>
                 <div className="hidden sm:ml-6 sm:flex sm:space-x-8 sm:items-center">
                   <Link
-                    href="/"
-                    prefetch
+                    activeClass="active"
+                    to="home"
+                    spy={true}
+                    smooth={true}
+                    offset={50}
+                    duration={500}
                     className={`${
                       pathname === "/"
                         ? "border-teal-500 dark:text-white h-full inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
@@ -35,8 +41,12 @@ export default function Navbar() {
                     Home
                   </Link>
                   <Link
-                    href="/Projects"
-                    prefetch
+                    activeClass="active"
+                    to="projects"
+                    spy={true}
+                    smooth={true}
+                    offset={50}
+                    duration={500}
                     className={`${
                       pathname === "/Projects"
                         ? "border-teal-500 dark:text-white h-full inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
@@ -46,8 +56,12 @@ export default function Navbar() {
                     Projects
                   </Link>
                   <Link
-                    href="/Mantra"
-                    prefetch
+                    activeClass="active"
+                    to="mantra"
+                    spy={true}
+                    smooth={true}
+                    offset={50}
+                    duration={500}
                     className={`${
                       pathname === "/Mantra"
                         ? "border-teal-500 dark:text-white h-full inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
@@ -57,8 +71,12 @@ export default function Navbar() {
                     Mantra
                   </Link>
                   <Link
-                    href="/Contact"
-                    prefetch
+                    activeClass="active"
+                    to="contact"
+                    spy={true}
+                    smooth={true}
+                    offset={50}
+                    duration={500}
                     className={`${
                       pathname === "/Contact"
                         ? "border-teal-500 dark:text-white h-full inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
@@ -111,8 +129,12 @@ export default function Navbar() {
           <Disclosure.Panel className="sm:hidden">
             <div className="pt-2 pb-3 space-y-1">
               <Link
-                href="/"
-                prefetch
+                activeClass="active"
+                to="home"
+                spy={true}
+                smooth={true}
+                offset={50}
+                duration={500}
                 className={`${
                   pathname === "/"
                     ? "bg-teal-50 border-teal-500 text-teal-500 block pl-3 pr-4 py-2 border-l-4 text-base font-medium dark:bg-gray-800"
@@ -122,8 +144,12 @@ export default function Navbar() {
                 Home
               </Link>
               <Link
-                href="/Projects"
-                prefetch
+                activeClass="active"
+                to="projects"
+                spy={true}
+                smooth={true}
+                offset={50}
+                duration={500}
                 className={`${
                   pathname === "/Projects"
                     ? "bg-teal-50 border-teal-500 text-teal-500 block pl-3 pr-4 py-2 border-l-4 text-base font-medium dark:bg-gray-800"
@@ -133,8 +159,12 @@ export default function Navbar() {
                 Projects
               </Link>
               <Link
-                href="/Mantra"
-                prefetch
+               activeClass="active" 
+               to="mantra" 
+               spy={true} 
+               smooth={true} 
+               offset={50} 
+               duration={500} 
                 className={`${
                   pathname === "/Mantra"
                     ? "bg-teal-50 border-teal-500 text-teal-500 block pl-3 pr-4 py-2 border-l-4 text-base font-medium dark:bg-gray-800"
@@ -144,15 +174,19 @@ export default function Navbar() {
                 Mantra
               </Link>
               <Link
-                href="/Contact"
-                prefetch
+                activeClass="active" 
+                to="contact" 
+                spy={true} 
+                smooth={true} 
+                offset={50} 
+                duration={500} 
                 className={`${
                   pathname === "/Contact"
                     ? "bg-teal-50 border-teal-500 text-teal-500 block pl-3 pr-4 py-2 border-l-4 text-base font-medium dark:bg-gray-800"
                     : "border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-white block pl-3 pr-4 py-2 dark:hover:bg-gray-700 border-l-4 text-base font-medium dark:text-white"
                 }`}
               >
-                Contract
+                Contact
               </Link>
             </div>
           </Disclosure.Panel>

@@ -3,17 +3,27 @@
 @tailwind utilities;
 
 @keyframes pulse {
-    0% {
-      opacity: 1;
-      transform: none;
-    }
-    50% {
-      opacity: 0.8;
-      transform: scale(0.8);
-    }
-    100% {
-      opacity: 1;
-      transform: none;
-    }
+  0% {
+    opacity: 1;
+    transform: none;
   }
-  
+  50% {
+    opacity: 0.8;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+#contact p, svg{
+  animation: pulse 2s 3s ease-out infinite;
+  margin: 0;
+}
+.pulse{
+  animation: pulse 2s 3s ease-out infinite;
+}
+.mantra:hover{
+  animation: pulse 2s 3s ease-out infinite;
+}

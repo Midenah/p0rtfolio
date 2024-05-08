@@ -1,12 +1,11 @@
 import Image from "next/image";
 import JT from "@/public/casual profile ed.jpg";
-//import Project from "@/app/Projects/page"
 
 export default function Home() {
   return (
-    <div className="divide-y divide-gray-100 dark:divide-gray-700">
+    <div className="divide-y divide-teal-500 dark:divide-gray-700 font-serif">
       <div className="space-y-2 pt-5 pb-8 md:space-x-5">
-        <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-13">
+        <h1 className="text-2xl font-bold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-13">
           Home
         </h1>
       </div>
@@ -16,9 +15,9 @@ export default function Home() {
           <Image
             alt="Picture of Justina Olamide"
             src={JT}
-            className="h-48 w-48 rounded-full object-cover object-top"
+            className="h-50 w-50 rounded-full object-cover object-top"
           />
-          <h3 className="pt-4 pb-2 text-2xl font-bold leading-8 tracking-tight">
+          <h3 className="pt-4 pb-2 text-teal-500 text-2xl font-bold leading-8 tracking-tight">
             Justina Oluyomi
           </h3>
           <p className="text-gray-500 dark:text-gray-300 text-lg text-center">
@@ -69,8 +68,11 @@ export default function Home() {
         </div>
 
         <div className="prose max-w-none prose-lg pt-8 pb-7 dark:prose-invert xl:col-span-2">
-          <p className="text-center text-3xl bg-gradient-to-r from-cyan-500 to-teal-500 m-10">
+          <p className=" pulse text-center rounded-3xl text-3xl bg-gradient-to-r from-cyan-500 to-teal-500 m-10">
             Hi, i am Justina | Front-end developer
+          </p>
+          <p className="text-xl mb-10">
+            A software developer currently based in Lagos Nigeria
           </p>
           <p className="text-xl mb-10">
             I love building applications with React and to share them with teams

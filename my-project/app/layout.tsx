@@ -1,8 +1,11 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Mansalva } from "next/font/google";
 import Navbar from "./components/Navbar";
 import { Provider } from "./components/Provider";
+import Contact from "./Contact/page";
+import Projects from "./Projects/page";
+import Mantra from "./Mantra/page";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,9 +26,13 @@ export default function RootLayout({
       >
         <Provider>
           <Navbar />
-          <main className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <main className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-4 space-y-40">
             {children}
+            <Projects/>
+          <Mantra/>
+          <Contact/>
           </main>
+         
         </Provider>
       </body>
     </html>
